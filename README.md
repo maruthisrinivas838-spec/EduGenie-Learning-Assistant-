@@ -138,3 +138,5 @@ Open Source Contributors
 
 Watch the demo here:
 https://drive.google.com/file/d/1z3444Vxcvns6Ul0LviwoSjmYdXCa1Xaz/view?usp=sharing
+link to view the project:
+https://github.com/maruthisrinivas838-spec/EduGenie-Learning-Assistant-/tree/main
