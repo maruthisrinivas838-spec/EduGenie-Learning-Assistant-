@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGenie Learning Assistant</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>EduGenie Learning Assistant</h1>
+    <p>Google Gemini + LaMini-Flan-T5 Powered AI Learning Platform</p>
+</header>
+
+<div class="container">
+
+    <!-- Question Answer -->
+    <div class="card">
+        <h2>Question Answering</h2>
+
+        <textarea id="question" placeholder="Ask your question..."></textarea>
+
+        <button onclick="askQuestion()">Get Answer</button>
+
+        <div class="output" id="answerOutput"></div>
+    </div>
+
+    <!-- Concept Explanation -->
+    <div class="card">
+
+        <h2>Concept Explanation</h2>
+
+        <input
+            type="text"
+            id="topic"
+            placeholder="Enter Topic"
+        >
+
+        <button onclick="explainTopic()">
+            Explain
+        </button>
+
+        <div class="output" id="explanationOutput"></div>
+
+    </div>
+
+    <!-- Summarization -->
+    <div class="card">
+
+        <h2>Summarization</h2>
+
+        <textarea
+            id="summaryText"
+            placeholder="Paste paragraph..."
+        ></textarea>
+
+        <button onclick="generateSummary()">
+            Summarize
+        </button>
+
+        <div class="output" id="summaryOutput"></div>
+
+    </div>
+
+    <!-- Quiz -->
+
+    <div class="card">
+
+        <h2>Quiz Generator</h2>
+
+        <textarea
+            id="quizText"
+            placeholder="Paste educational content..."
+        ></textarea>
+
+        <button onclick="generateQuiz()">
+            Generate Quiz
+        </button>
+
+        <div class="output" id="quizOutput"></div>
+
+    </div>
+
+    <!-- Learning Path -->
+
+    <div class="card">
+
+        <h2>Learning Roadmap</h2>
+
+        <input
+            type="text"
+            id="roadmapTopic"
+            placeholder="Topic Name"
+        >
+
+        <button onclick="generateRoadmap()">
+            Generate Learning Path
+        </button>
+
+        <div class="output" id="roadmapOutput"></div>
+
+    </div>
+
+</div>
+
+<script>
+
+const API = "http://127.0.0.1:8000";
+
+async function askQuestion(){
+
+let question=document.getElementById("question").value;
+
+const response=await fetch(API+"/qna",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+question:question
+})
+
+});
+
+const data=await response.json();
+
+document.getElementById("answerOutput").innerText=data.answer;
+
+}
+
+async function explainTopic(){
+
+let topic=document.getElementById("topic").value;
+
+const response=await fetch(API+"/explain",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+topic:topic
+})
+
+});
+
+const data=await response.json();
+
+document.getElementById("explanationOutput").innerText=data.explanation;
+
+}
+
+async function generateSummary(){
+
+let text=document.getElementById("summaryText").value;
+
+const response=await fetch(API+"/summary",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+text:text
+})
+
+});
+
+const data=await response.json();
+
+document.getElementById("summaryOutput").innerText=data.summary;
+
+}
+
+async function generateQuiz(){
+
+let text=document.getElementById("quizText").value;
+
+const response=await fetch(API+"/quiz",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+text:text
+})
+
+});
+
+const data=await response.json();
+
+document.getElementById("quizOutput").innerHTML=
+"<pre>"+JSON.stringify(data.quiz,null,4)+"</pre>";
+
+}
+
+async function generateRoadmap(){
+
+let topic=document.getElementById("roadmapTopic").value;
+
+const response=await fetch(API+"/learning-path",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+topic:topic
+})
+
+});
+
+const data=await response.json();
+
+document.getElementById("roadmapOutput").innerText=data.learning_path;
+
+}
+
+</script>
+
+</body>
+</html>
