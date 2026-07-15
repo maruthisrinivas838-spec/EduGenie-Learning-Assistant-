@@ -1,142 +1,179 @@
-# EduGenie Learning Assistant
-EduGenie_Google_Gemini_Powered_Learning_Assistant
-🎓 EduGenie – AI-Powered Educational Assistant
-📌 Overview
-EduGenie is a lightweight AI-powered educational assistant designed to simplify and enhance the learning experience using Generative AI. The application assists students, self-learners, and educators by providing intelligent educational support such as answering questions, explaining concepts, generating quizzes, summarizing educational content, and recommending personalized learning paths.
 
-The project is built using FastAPI for the backend and a responsive HTML/CSS frontend. It integrates Google's Gemini API and lightweight NLP models to deliver fast, accurate, and context-aware educational assistance.
-
-🚀 Features
-📖 Intelligent Question Answering
-💡 Simplified Concept Explanation
-📝 AI-Powered Quiz Generation
-📄 Educational Text Summarization
-🛤 Personalized Learning Path Recommendation
-🌐 Interactive and User-Friendly Interface
-⚡ FastAPI REST APIs
-🤖 Gemini AI Integration
-🛠 Technology Stack
-Frontend
-HTML5
-CSS3
-JavaScript
-Backend
-FastAPI
-Uvicorn
-AI & Machine Learning
-Google Gemini API
-LaMini-Flan-T5
-Transformers
-PyTorch
-Other Libraries
-python-dotenv
-Requests
-Jinja2
-📂 Project Structure
-EduGenie/
-│
-├── app.py
-├── requirements.txt
-├── README.md
-├── .env
-│
-├── templates/
-│   └── index.html
-│
-├── static/
-│   ├── css/
-│   ├── js/
-⚙ Installation
-1. Clone the Repository
-git clone https://github.com/yourusername/EduGenie.git
-2. Move into the Project Folder
-cd EduGenie
-3. Create Virtual Environment
-Windows
-
-python -m venv venv
-venv\Scripts\activate
-Linux / macOS
-
-python3 -m venv venv
-source venv/bin/activate
-4. Install Dependencies
-pip install -r requirements.txt
-5. Configure Environment Variables
-Create a .env file.
-
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-6. Run the Application
-uvicorn app:app --reload
-7. Open in Browser
-http://127.0.0.1:8000
-📚 Modules
-Intelligent Question Answering
-Answers academic questions with accurate and context-aware responses.
-
-Concept Explanation
-Explains complex concepts in simple and understandable language.
-
-Quiz Generation
-Automatically creates topic-based multiple-choice questions.
-
-Text Summarization
-Generates concise summaries from lengthy educational content.
-
-Personalized Learning Path
-Creates structured study roadmaps from beginner to advanced levels.
-
-🎯 Example Use Cases
-Scenario 1
-A student asks:
-
-Which is the largest ocean?
-
-EduGenie provides the answer along with additional educational information.
-
-Scenario 2
-A learner studying the Pythagoras Theorem selects Generate Quiz.
-
-EduGenie creates multiple-choice questions for self-assessment.
-
-Scenario 3
-A learner interested in SQL requests a learning roadmap.
-
-EduGenie generates a personalized study plan covering beginner, intermediate, and advanced topics.
-
-📊 Project Highlights
-Modular FastAPI Architecture
-Clean and Readable Code
-REST API Design
-AI-Powered Educational Support
-Responsive User Interface
-Easy Deployment
-Beginner-Friendly Design
-🔮 Future Enhancements
-Voice-Based Question Answering
-PDF Upload and Analysis
-Multi-language Support
-Student Progress Tracking
-Authentication and User Profiles
-Learning Analytics Dashboard
-Offline AI Model Support
-👨‍💻 Developed By
-Project Name: EduGenie – AI-Powered Educational Assistant
-
-Department of Computer Science and Engineering
-
-📄 License
-This project is developed for educational and academic purposes.
-
-⭐ Acknowledgements
-Google Gemini API
-FastAPI
-Hugging Face Transformers
-Python Community
-Open Source Contributors
 ## Project Demo Video
 
 Watch the demo here:
 https://drive.google.com/file/d/1z3444Vxcvns6Ul0LviwoSjmYdXCa1Xaz/view?usp=sharing
 link to view the project:
 https://github.com/maruthisrinivas838-spec/EduGenie-Learning-Assistant-/tree/main
+# 🎓 Edu-Genie - AI Learning Assistant
+
+Edu-Genie is an AI-powered learning assistant designed to make studying easier, faster, and more interactive.
+
+The platform uses Google's Gemini API to provide intelligent explanations, answer academic questions, generate quizzes, summarize learning materials, and suggest personalized learning paths.
+
+Edu-Genie transforms AI responses into structured learning content instead of simple chatbot replies, helping students understand concepts more effectively.
+
+---
+
+## 🚀 Features
+
+### 📚 AI Concept Explanation
+- Explains complex topics in a simple and student-friendly way.
+- Helps learners understand concepts step-by-step.
+
+### ❓ AI Question & Answer
+- Provides answers to academic and general knowledge questions.
+- Uses Gemini AI for intelligent responses.
+
+### 📝 Quiz Generation
+- Automatically creates multiple-choice questions from provided content.
+- Helps students test their understanding.
+
+### 📄 Smart Summarization
+- Converts lengthy content into concise summaries.
+- Useful for quick revision and study preparation.
+
+### 🎯 Personalized Learning Path
+- Suggests learning directions based on topics.
+- Helps students follow a structured learning approach.
+
+### 🎨 Interactive User Interface
+- Modern AI response cards.
+- Smooth animations and transitions.
+- Clean and responsive design.
+- Copy and clear output functionalities.
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+## Backend
+- Python
+- FastAPI
+
+## Artificial Intelligence
+- Google Gemini API
+
+## Development Tools
+- VS Code
+- Git
+- Python Virtual Environment
+
+---
+
+# 📂 Project Structure
+
+```
+Edu-Genie/
+│
+├── main.py
+├── gemini_config.py
+├── requirements.txt
+│
+├── templates/
+│   └── index.html
+│
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   │
+│   └── js/
+│       └── script.js
+│
+├── .env
+├── README.md
+└── LICENSE
+```
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/Edu-Genie.git
+```
+
+## 2. Navigate into Project Folder
+
+```bash
+cd Edu-Genie
+```
+
+## 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## 4. Configure Gemini API
+
+Create a `.env` file:
+
+```
+GEMINI_API_KEY=your_api_key_here
+```
+
+Replace `your_api_key_here` with your Google Gemini API key.
+
+## 5. Run the Application
+
+```bash
+uvicorn main:app --reload
+```
+
+Open:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+# 🧠 How Edu-Genie Works
+
+1. User enters a topic, question, or content.
+2. FastAPI processes the request.
+3. Gemini AI generates the response.
+4. The response is formatted into a learning-friendly interface.
+5. User receives explanations, quizzes, summaries, or learning guidance.
+
+---
+
+# 🔮 Future Enhancements
+
+Planned improvements:
+
+- User authentication system
+- Registration and login
+- User dashboard
+- Admin dashboard
+- Database integration
+- Learning history tracking
+- Progress analytics
+- PDF/document upload support
+- Voice-based learning assistant
+
+---
+
+# 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+**P.Maruthi Srinivas**
+**Roll No : 24P35A0538**
+**Email: maruthisrinivas838@gmail.com**
+
+---
+
+## ⭐ Project Status
