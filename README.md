@@ -1,10 +1,5 @@
 
-## Project Demo Video
 
-Watch the demo here:
-https://drive.google.com/file/d/1z3444Vxcvns6Ul0LviwoSjmYdXCa1Xaz/view?usp=sharing
-link to view the project:
-https://github.com/maruthisrinivas838-spec/EduGenie-Learning-Assistant-/tree/main
 # 🎓 Edu-Genie - AI Learning Assistant
 
 Edu-Genie is an AI-powered learning assistant designed to make studying easier, faster, and more interactive.
@@ -177,3 +172,9 @@ This project is licensed under the MIT License.
 ---
 
 ## ⭐ Project Status
+## Project Demo Video
+
+Watch the demo here:
+https://drive.google.com/file/d/1z3444Vxcvns6Ul0LviwoSjmYdXCa1Xaz/view?usp=sharing
+link to view the project:
+https://github.com/maruthisrinivas838-spec/EduGenie-Learning-Assistant-/tree/main
